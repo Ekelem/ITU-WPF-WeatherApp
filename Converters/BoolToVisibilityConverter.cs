@@ -9,15 +9,14 @@ namespace WPFWeather.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var boolValue = (bool) value;
-            var boolParameter = parameter != null ? bool.Parse((string) parameter) : false;
-
-            if (boolParameter) return boolValue ? Visibility.Hidden : Visibility.Visible;
-            return boolValue ? Visibility.Visible : Visibility.Hidden;
+            return (bool)value ? Visibility.Visible : Visibility.Hidden;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value is Visibility)
+                return value is Visibility.Visible;
+
             return null;
         }
     }
