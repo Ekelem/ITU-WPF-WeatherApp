@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
+using System.Windows.Media; //ImageSource
+using System.Windows.Media.Imaging; //BitmapImage
 using WPFWeather.Models;
 using WPFWeather.Services.OpenWeatherMapModels;
 
