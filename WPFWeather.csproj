@@ -86,7 +86,6 @@
     <Compile Include="Services\OpenWeatherMapModels\Openweathermap.cs" />
     <Compile Include="Services\OpenWeatherMapModels\Sys.cs" />
     <Compile Include="Services\OpenWeatherMapModels\Weather.cs" />
-    <Compile Include="Services\WeatherDiskService.cs" />
     <Compile Include="Services\WeatherInfoMapper.cs" />
     <Compile Include="Services\WeatherOpenWeatherMapService.cs" />
     <Compile Include="Services\WeatherServiceBase.cs" />
