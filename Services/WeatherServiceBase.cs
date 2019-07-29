@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using WPFWeather.Data;
 using WPFWeather.Models;
-using WPFWeather.Services.OpenWeatherMapModels;
 
 namespace WPFWeather.Services
 {
@@ -13,7 +13,7 @@ namespace WPFWeather.Services
 
             if (string.IsNullOrEmpty(jsonString)) throw new ArgumentOutOfRangeException(nameof(city));
 
-            var weatherFromJson = Openweathermap.FromJson(jsonString);
+            var weatherFromJson = Openweatherdata.FromJson(jsonString);
 
             return WeatherInfoMapper.Map(weatherFromJson);
         }

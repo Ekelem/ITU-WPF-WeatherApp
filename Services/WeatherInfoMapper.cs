@@ -2,25 +2,25 @@
 using System.Windows.Media; //ImageSource
 using System.Windows.Media.Imaging; //BitmapImage
 using WPFWeather.Models;
-using WPFWeather.Services.OpenWeatherMapModels;
+using WPFWeather.Data;
 
 namespace WPFWeather.Services
 {
     public class WeatherInfoMapper
     {
-        public static WeatherInfoModel Map(Openweathermap openweathermap)
+        public static WeatherInfoModel Map(Openweatherdata openweather)
         {
             return new WeatherInfoModel
             {
-                CityName = openweathermap.Name,
-                Description = openweathermap.Weather[0].Description,
-                Humidity = openweathermap.Main.Humidity,
-                Icon = GetIcon(openweathermap.Weather[0].Icon),
-                Sunrise = DateTimeOffset.FromUnixTimeSeconds(openweathermap.Sys.Sunrise).DateTime,
-                Sunset = DateTimeOffset.FromUnixTimeSeconds(openweathermap.Sys.Sunset).DateTime,
-                Temperature = (decimal) openweathermap.Main.Temp,
-                WindDirection = (decimal) openweathermap.Wind.Deg,
-                WindSpeed = (decimal) openweathermap.Wind.Speed
+                CityName = openweather.Name,
+                Description = openweather.Weather[0].Description,
+                Humidity = openweather.Main.Humidity,
+                Icon = GetIcon(openweather.Weather[0].Icon),
+                Sunrise = DateTimeOffset.FromUnixTimeSeconds(openweather.Sys.Sunrise).DateTime,
+                Sunset = DateTimeOffset.FromUnixTimeSeconds(openweather.Sys.Sunset).DateTime,
+                Temperature = (decimal) openweather.Main.Temp,
+                WindDirection = (decimal) openweather.Wind.Deg,
+                WindSpeed = (decimal) openweather.Wind.Speed
             };
         }
 

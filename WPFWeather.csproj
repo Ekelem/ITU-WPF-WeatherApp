@@ -79,13 +79,13 @@
     </ApplicationDefinition>
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Services\IWeatherService.cs" />
-    <Compile Include="Services\OpenWeatherMapModels\Clouds.cs" />
-    <Compile Include="Services\OpenWeatherMapModels\Converter.cs" />
-    <Compile Include="Services\OpenWeatherMapModels\Coord.cs" />
-    <Compile Include="Services\OpenWeatherMapModels\Main.cs" />
-    <Compile Include="Services\OpenWeatherMapModels\Openweathermap.cs" />
-    <Compile Include="Services\OpenWeatherMapModels\Sys.cs" />
-    <Compile Include="Services\OpenWeatherMapModels\Weather.cs" />
+    <Compile Include="Data\Clouds.cs" />
+    <Compile Include="Data\Converter.cs" />
+    <Compile Include="Data\Coord.cs" />
+    <Compile Include="Data\Main.cs" />
+    <Compile Include="Data\Openweatherdata.cs" />
+    <Compile Include="Data\Sys.cs" />
+    <Compile Include="Data\Weather.cs" />
     <Compile Include="Services\WeatherInfoMapper.cs" />
     <Compile Include="Services\WeatherOpenWeatherMapService.cs" />
     <Compile Include="Services\WeatherServiceBase.cs" />
@@ -93,7 +93,7 @@
     <Compile Include="Commands\IAsyncCommand.cs" />
     <Compile Include="Commands\IErrorHandler.cs" />
     <Compile Include="Commands\TaskUtilities.cs" />
-    <Compile Include="Services\OpenWeatherMapModels\Wind.cs" />
+    <Compile Include="Data\Wind.cs" />
     <Compile Include="Models\WeatherInfoModel.cs" />
     <Compile Include="ViewModels\WeatherViewModel.cs" />
     <Page Include="Windows\MainWindow.xaml">
@@ -128,15 +128,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="Data\brno.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\london.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\praha.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -167,6 +158,9 @@
     <Resource Include="Icons\sn50.png" />
     <Resource Include="Icons\t50.png" />
     <Resource Include="Icons\w50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\OpenWeatherMapModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
