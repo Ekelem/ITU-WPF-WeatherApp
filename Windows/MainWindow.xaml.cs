@@ -10,7 +10,7 @@ namespace WPFWeather.Windows
         {
             InitializeComponent();
 
-            WeatherViewModel viewModel = new WeatherViewModel(new WeatherDiskService());
+            WeatherViewModel viewModel = new WeatherViewModel(new WeatherOpenWeatherMapService());
             DataContext = viewModel;
         }
     }
