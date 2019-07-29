@@ -7,7 +7,7 @@ namespace WPFWeather.Services
 {
     public abstract class WeatherServiceBase : IWeatherService
     {
-        public async Task<WeatherInfoModel> DownloadWeatherAsync(string city)
+        public async Task<WeatherDataModel> DownloadWeatherAsync(string city)
         {
             var jsonString = await GetWeatherAsync(city.ToLower());
 

@@ -6,6 +6,6 @@ namespace WPFWeather.Services
 {
     public interface IWeatherService
     {
-        Task<WeatherInfoModel> DownloadWeatherAsync(string city);
+        Task<WeatherDataModel> DownloadWeatherAsync(string city);
     }
 }

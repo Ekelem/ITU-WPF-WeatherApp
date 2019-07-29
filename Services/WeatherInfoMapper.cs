@@ -8,9 +8,9 @@ namespace WPFWeather.Services
 {
     public class WeatherInfoMapper
     {
-        public static WeatherInfoModel Map(Openweatherdata openweather)
+        public static WeatherDataModel Map(Openweatherdata openweather)
         {
-            return new WeatherInfoModel
+            return new WeatherDataModel
             {
                 CityName = openweather.Name,
                 Description = openweather.Weather[0].Description,

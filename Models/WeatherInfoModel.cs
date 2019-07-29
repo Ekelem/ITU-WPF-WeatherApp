@@ -3,7 +3,7 @@ using System.Windows.Media;
 
 namespace WPFWeather.Models
 {
-    public struct WeatherInfoModel
+    public struct WeatherDataModel
     {
         public string CityName { get; set; }
         public decimal Temperature { get; set; }

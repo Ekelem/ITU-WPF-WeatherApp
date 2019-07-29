@@ -17,7 +17,7 @@ namespace WPFWeather.ViewModels
         private readonly IWeatherService _weatherService;
         private bool _downloadingWeather;
         private string _errorMessage;
-        private WeatherInfoModel _weather;
+        private WeatherDataModel _weather;
 
         public WeatherViewModel(IWeatherService weatherService)
         {
@@ -57,7 +57,7 @@ namespace WPFWeather.ViewModels
             }
         }
 
-        public WeatherInfoModel Weather
+        public WeatherDataModel Weather
         {
             get => _weather;
             private set
@@ -101,7 +101,7 @@ namespace WPFWeather.ViewModels
         private void HandleUpdateWeatherFailed(string message)
         {
             ErrorMessage = message;
-            this.Weather = new WeatherInfoModel();
+            this.Weather = new WeatherDataModel();
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
