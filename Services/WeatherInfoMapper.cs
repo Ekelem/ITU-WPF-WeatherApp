@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using WPFWeather.Models;
@@ -14,9 +13,9 @@ namespace WPFWeather.Services
             return new WeatherInfoModel
             {
                 CityName = openweathermap.Name,
-                Description = openweathermap.Weather.First().Description,
+                Description = openweathermap.Weather[0].Description,
                 Humidity = openweathermap.Main.Humidity,
-                Icon = GetIcon(openweathermap.Weather.First().Icon),
+                Icon = GetIcon(openweathermap.Weather[0].Icon),
                 Sunrise = DateTimeOffset.FromUnixTimeSeconds(openweathermap.Sys.Sunrise).DateTime,
                 Sunset = DateTimeOffset.FromUnixTimeSeconds(openweathermap.Sys.Sunset).DateTime,
                 Temperature = (decimal) openweathermap.Main.Temp,
