@@ -1,5 +1,6 @@
-﻿using System;
+﻿using System.Globalization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace WPFWeather.Data
 {
@@ -30,9 +31,19 @@ namespace WPFWeather.Data
 
     public partial class Openweatherdata
     {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            Converters =
+            {
+                new IsoDateTimeConverter {DateTimeStyles = DateTimeStyles.AssumeUniversal}
+            }
+        };
+
         public static Openweatherdata FromJson(string json)
         {
-            return JsonConvert.DeserializeObject<Openweatherdata>(json, Converter.Settings);
+            return JsonConvert.DeserializeObject<Openweatherdata>(json, Settings);
         }
     }
 }

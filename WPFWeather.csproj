@@ -80,7 +80,6 @@
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Services\IWeatherService.cs" />
     <Compile Include="Data\Clouds.cs" />
-    <Compile Include="Data\Converter.cs" />
     <Compile Include="Data\Coord.cs" />
     <Compile Include="Data\Main.cs" />
     <Compile Include="Data\Openweatherdata.cs" />
