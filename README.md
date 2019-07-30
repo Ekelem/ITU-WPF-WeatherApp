@@ -1,2 +1,3 @@
 # ITU-WPF-WeatherApp
-School exercise for class 'User Interface Programming'
+School project for class 'User Interface Programming'
+![alt text](https://github.com/Ekelem/ITU-WPF-WeatherApp/blob/master/Icons/example.png)
