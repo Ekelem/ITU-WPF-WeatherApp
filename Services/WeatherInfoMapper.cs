@@ -17,6 +17,8 @@ namespace WPFWeather.Services
                 Description = openweather.Weather[0].Description,
                 Humidity = openweather.Main.Humidity,
                 Icon = GetIcon(openweather.Weather[0].Icon),
+                Longitude = (decimal) openweather.Coord.Lon,
+                Latitude = (decimal)openweather.Coord.Lat,
                 Sunrise = DateTimeOffset.FromUnixTimeSeconds(openweather.Sys.Sunrise).DateTime,
                 Sunset = DateTimeOffset.FromUnixTimeSeconds(openweather.Sys.Sunset).DateTime,
                 Temperature = (decimal) openweather.Main.Temp,

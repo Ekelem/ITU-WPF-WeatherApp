@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using WPFWeather.Data;
 using WPFWeather.Models;
@@ -11,7 +8,7 @@ namespace WPFWeather.Services
 {
     class WeatherService : IWeatherService
     {
-        private readonly string _openWeatherMapAppId = "5174c48b50122686367191e785842895";
+        private readonly string _openWeatherMapAppId = "5174c48b50122686367191e785842895"; //Don't steal API key please
 
         protected async Task<string> GetWeatherAsync(string city)
         {
