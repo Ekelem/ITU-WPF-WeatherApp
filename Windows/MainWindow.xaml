@@ -16,7 +16,7 @@
         <converters:BoolToVisibilityConverter x:Key="boolToVisibilityConverter" />
     </Window.Resources>
 
-    <Grid>
+    <Grid Background="#B5CBEF">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
@@ -40,8 +40,10 @@
                                                 CommandParameter="{Binding ElementName=comboBox, Path=SelectedValue}" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
+            <ComboBoxItem Content="Bratislava"/>
             <ComboBoxItem Content="Brno"/>
-            <ComboBoxItem Content="London"/>
+            <ComboBoxItem Content="Sala"/>
+            <ComboBoxItem Content="Unexisted City"/>
         </ComboBox>
         <TextBlock Visibility="{Binding DownloadingWeather, Converter={StaticResource boolToVisibilityConverter}, ConverterParameter=False}" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Text="Downloading data..." VerticalAlignment="Bottom"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="{Binding Weather.Temperature, StringFormat={}{0:0}°}" VerticalAlignment="Center"/>
@@ -59,4 +61,5 @@
         <Image Grid.Column="1" HorizontalAlignment="Center" Height="100" Grid.Row="0" VerticalAlignment="Top" Width="100" Source="{Binding Weather.Icon}"/>
 
     </Grid>
+
 </Window>
