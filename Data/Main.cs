@@ -1,10 +1,12 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace WPFWeather.Data
 {
     public class Main
     {
+        /// <summary>
+        ///     cleaned https://github.com/swiftyspiffy/OpenWeatherMap-API-CSharp
+        /// </summary>
         [JsonProperty("temp")] public double Temp { get; set; }
 
         [JsonProperty("humidity")] public long Humidity { get; set; }
