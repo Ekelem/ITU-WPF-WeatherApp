@@ -13,6 +13,7 @@ namespace WPFWeather.Services
             return new WeatherDataModel
             {
                 CityName = openweather.Name,
+                Country = openweather.Sys.Country,
                 Description = openweather.Weather[0].Description,
                 Humidity = openweather.Main.Humidity,
                 Icon = GetIcon(openweather.Weather[0].Icon),

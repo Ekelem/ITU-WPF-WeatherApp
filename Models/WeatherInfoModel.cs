@@ -16,6 +16,7 @@ namespace WPFWeather.Models
         public decimal Humidity { get; set; }
         public decimal Pressure { get; set; }
         //Sys properties
+        public string Country { get; set; }
         public DateTime Sunrise { get; set; }
         public DateTime Sunset { get; set; }
         //Wind properties
