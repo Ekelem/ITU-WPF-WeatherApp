@@ -86,8 +86,7 @@
     <Compile Include="Data\Sys.cs" />
     <Compile Include="Data\Weather.cs" />
     <Compile Include="Services\WeatherInfoMapper.cs" />
-    <Compile Include="Services\WeatherOpenWeatherMapService.cs" />
-    <Compile Include="Services\WeatherServiceBase.cs" />
+    <Compile Include="Services\WeatherService.cs" />
     <Compile Include="Commands\AsyncCommand.cs" />
     <Compile Include="Commands\IAsyncCommand.cs" />
     <Compile Include="Commands\IErrorHandler.cs" />
@@ -126,7 +125,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -158,9 +159,7 @@
     <Resource Include="Icons\t50.png" />
     <Resource Include="Icons\w50.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\OpenWeatherMapModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -11,6 +11,7 @@ namespace WPFWeather.ViewModels
 {
     /// <summary>
     ///     Main ViewModel for application.
+    ///     VUT Brno FIT school template (author: Ing. Petr Dobeš)
     /// </summary>
     public class WeatherViewModel : INotifyPropertyChanged
     {
